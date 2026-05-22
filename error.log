@@ -1,0 +1,70 @@
+ Image 2012338-devops-project-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 566B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 232B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim
+#3 DONE 0.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 826B 0.1s done
+#5 DONE 0.1s
+
+#6 [1/5] FROM docker.io/library/python:3.11-slim@sha256:a3ab0b966bc4e91546a033e22093cb840908979487a9fc0e6e38295747e49ac0
+#6 resolve docker.io/library/python:3.11-slim@sha256:a3ab0b966bc4e91546a033e22093cb840908979487a9fc0e6e38295747e49ac0 0.1s done
+#6 DONE 0.1s
+
+#7 [3/5] COPY requirements.txt .
+#7 CACHED
+
+#8 [2/5] WORKDIR /app
+#8 CACHED
+
+#9 [4/5] RUN pip install -r requirements.txt
+#9 CACHED
+
+#10 [5/5] COPY . .
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.1s done
+#11 exporting manifest sha256:e6267edac0b1361de5b21a36ce0ec042fa07cdde08c05addc6395962cdcf0067 0.0s done
+#11 exporting config sha256:3787c57c472933f66a5c2cd46199bc374217599a13e42d6cca446a738c05779b 0.0s done
+#11 exporting attestation manifest sha256:f1a0b5c83a9c4bacf00e68c10edc1571ff57f7b806cbe62504a485764a580bce 0.1s done
+#11 exporting manifest list sha256:cc7dd27c8e6ca439542917a3ad6b078244364cd5b2fa9b7cf2962f439581c048
+#11 exporting manifest list sha256:cc7dd27c8e6ca439542917a3ad6b078244364cd5b2fa9b7cf2962f439581c048 0.0s done
+#11 naming to docker.io/library/2012338-devops-project-web:latest done
+#11 unpacking to docker.io/library/2012338-devops-project-web:latest 0.1s done
+#11 DONE 0.5s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image 2012338-devops-project-web Built 
+ Container 2012338-devops-project-web-1 Recreate 
+ Container 2012338-devops-project-web-1 Recreated 
+Attaching to db-1, web-1
+ Container 2012338-devops-project-db-1 Starting 
+ Container 2012338-devops-project-db-1 Started 
+ Container 2012338-devops-project-web-1 Starting 
+db-1  | 
+db-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-1  | 
+db-1  | 2026-05-22 12:15:55.110 UTC [1] LOG:  starting PostgreSQL 15.18 (Debian 15.18-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-1  | 2026-05-22 12:15:55.111 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1  | 2026-05-22 12:15:55.111 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1  | 2026-05-22 12:15:55.141 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1  | 2026-05-22 12:15:55.172 UTC [29] LOG:  database system was shut down at 2026-05-22 12:15:37 UTC
+db-1  | 2026-05-22 12:15:55.192 UTC [1] LOG:  database system is ready to accept connections
+ Container 2012338-devops-project-web-1 Started 
+web-1  | INFO:     Started server process [1]
+web-1  | INFO:     Waiting for application startup.
+web-1  | INFO:     Application startup complete.
+web-1  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
