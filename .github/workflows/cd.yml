@@ -1,0 +1,6 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
